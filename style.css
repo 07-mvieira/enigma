@@ -1,0 +1,20 @@
+.btnmessage{
+    width: 120px;
+    height: 20px;
+}
+
+ 
+.botoesfinais{
+    display: flex;
+    margin-top: 10px;
+}
+#btnCriptografar{
+    display: block;
+}
+#btnDescriptografar{
+    margin-left: 10px;
+}
+#btnLimpar{
+    margin-left: 16px;
+}
+ 

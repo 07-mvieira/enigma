@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografia de Alan Turing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Criptografia de Alan Turing</h1>
+        <input class="btnmessage" id="txaMensagem" type="text">
+        <h2>Rotore:</h2>
+        <input class="btnnumber" id="rotor1" type="number" min="0" max="9" value="0">
+        <input class="btnnumber" id="rotor2"  type="number" min="0" max="9" value="0">
+        <input class="btnnumber" id="rotor3" type="number" min="0" max="9" value="0">
+        <div class="botoesfinais">
+        <button type="button" id="btnCriptografar">Criptografar Mensagem</button>
+        <button type="button" id="btnDescriptografar">Descriptografar Mensagem</button>
+        <button type="button" id="btnLimpar">Limpar Mensagem</button>
+        <p id="txtCifragem"></p>
+        <p id="resultado"></p>
+    </div>
+    </div>
+    <script src="cifraturing.js"></script>
+</body>
+</html>

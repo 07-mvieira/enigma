@@ -1,7 +1,7 @@
 const ALFABETO = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const ROTORES = [
     "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
-    "AJDKSIRUXBLHWTMCQGZNPYFVO3",
+    "AJDKSIRUXBLHWTMCQGZNPYFVOE",
     "BDFHJLCPRTXVZNYEIWGAKMUSQO"
 ];
 const REFLETOR = { // todas as letras correspondem ao seu oposto (A: "Y", Y: "A")
@@ -75,6 +75,22 @@ let posicoesIniciais = [
 const mensagem = document.getElementById("txaMensagem").value;
 
 let mensagemCifrada = enigmaProcess(mensagem, [...posicoesIniciais]);
+
+const btnCriptografar = document.getElementById("btnCriptografar");
+btnCriptografar.addEventListener("click", function() {
+    let rotor1 = document.getElementById("rotor1").value;
+    let rotor2 = document.getElementById("rotor2").value;
+    let rotor3 = document.getElementById("rotor3").value;
+
+    let posicoesIniciais = [];
+    posicoesIniciais[0] = parseInt(rotor1); 
+    posicoesIniciais[1] = parseInt(rotor2);
+    posicoesIniciais[2] = parseInt(rotor3);
+    const mensagem = document.getElementById("txaMensagem").value;
+
+    let mensagemCifrada = enigmaProcess(mensagem, [...posicoesIniciais]);
+    document.getElementById("resultado").innerHTML = mensagemCifrada;
+});
 
 const btnDescriptografar = document.getElementById("btnDescriptografar");
 btnDescriptografar.addEventListener("click", function() {
