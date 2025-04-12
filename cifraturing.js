@@ -75,3 +75,30 @@ let posicoesIniciais = [
 const mensagem = document.getElementById("txaMensagem").value;
 
 let mensagemCifrada = enigmaProcess(mensagem, [...posicoesIniciais]);
+
+const btnDescriptografar = document.getElementById("btnDescriptografar");
+btnDescriptografar.addEventListener("click", function() {
+    
+    let rotor1 = document.getElementById("rotor1").value;
+    let rotor2 = document.getElementById("rotor2").value;
+    let rotor3 = document.getElementById("rotor3").value;
+    let posicoesIniciais = [
+        parseInt(rotor1),
+        parseInt(rotor2),
+        parseInt(rotor3)
+      ];
+    const mensagem = document.getElementById("txaMensagem").value;
+    //
+    let mensagemCifrada = enigmaProcess(mensagem, [...posicoesIniciais]);
+    document.getElementById("resultado").innerHTML = mensagemCifrada;
+    
+});
+
+const btnLimpar = document.getElementById("btnLimpar");
+btnLimpar.addEventListener("click", function() {
+    
+    document.getElementById("txaMensagem").value = '';
+    document.getElementById("txtCifragem").value = '';
+    document.getElementById("resultado").innerHTML = '';
+    
+});
