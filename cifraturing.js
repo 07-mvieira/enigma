@@ -24,11 +24,6 @@ function plugboardSwap(char) {
 function enigmaProcess(text, rotorPositions) {
     let result = "";
     let [r1, r2, r3] = rotorPositions;
-}
-
-function enigmaProcess(text, rotorPositions) {
-    let result = "";
-    let [r1, r2, r3] = rotorPositions;
 
     for (let i = 0; i < text.length; i++) {
         let char = text[i].toUpperCase();
